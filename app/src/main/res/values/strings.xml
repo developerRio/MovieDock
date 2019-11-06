@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MovieDock</string>
+
+    <string name="search_string"><![CDATA[Search Movies, Ratings, Year & more…]]></string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+
+    <!--Arrays-->
+
+    <string-array name="status">
+        <item>Sort by</item>
+        <item>Year</item>
+        <item>Tittle</item>
+    </string-array>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_circular_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="parallax">
+
+        <TextView
+            android:id="@+id/header_all_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:text="All Movies"
+            android:textColor="@color/text_color_black"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:id="@+id/sort_container"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/search_bg">
+
+            <Spinner
+                android:id="@+id/sort_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_all_movie"
+            android:layout_margin="16dp"
+            android:background="@drawable/search_bg"
+            android:focusable="false"
+            android:stateListAnimator="@null"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/search_string" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grid_movies_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_container"
+        android:padding="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/all_movies_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_slide_fom_bottom_effect"
+            android:orientation="vertical" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="15dp" />
+
+
+</RelativeLayout>
